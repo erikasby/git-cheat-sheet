@@ -9,7 +9,7 @@
 #### Make sure that you're on your master branch:
 3. `git checkout main`
 
-#### Rewrite your master branch so that any commits of yours that aren't already in upstream/master are replayed on top of that other branch:
+#### Rewrite your master branch so that any commits of yours that aren't already in upstream/main are replayed on top of that other branch:
 4. `git rebase upstream/main`
 
 ## Merge development branch with main
@@ -22,3 +22,11 @@
 
 #### There won't be any conflicts now
 3. `git merge development`
+
+## Reverting a file to a previous commit
+
+#### Outputs commit history of that file including hash
+1. `git log -- oneline src/App.js
+
+#### Revert a file to the needed commit using hash
+2. `git checkout 55a1dff -- src/App.js`
