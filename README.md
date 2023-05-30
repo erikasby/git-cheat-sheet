@@ -30,3 +30,7 @@
 
 #### Revert a file to the needed commit using hash
 2. `git checkout 55a1dff -- src/App.js`
+
+## git diff main and development branches
+`git diff --name-only origin/main origin/${GITHUB_HEAD_REF}`
+`git diff origin/main origin/${GITHUB_HEAD_REF} path/to/my/folder`
