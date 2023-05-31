@@ -12,6 +12,15 @@
 #### Rewrite your master branch so that any commits of yours that aren't already in upstream/main are replayed on top of that other branch:
 4. `git rebase upstream/main`
 
+## Clean up a fork and restart it from the upstream
+```
+git remote add upstream /url/to/original/repo
+git fetch upstream
+git checkout master
+git reset --hard upstream/master  
+git push origin master --force
+```
+
 ## Merge development branch with main
 
 #### On branch development
